@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>泰剧网-泰剧在线观看_泰剧推荐_泰剧TV资源_泰剧网</title>
+  <meta name="description" content="泰剧网汇集最新泰剧在线观看与推荐，提供泰剧TV资源、泰剧排行榜、经典泰剧回顾及泰剧演员资讯。2026年11月7日更新，追泰剧首选泰剧网，轻松发现好剧。">
+  <meta name="keywords" content="泰剧网,泰剧在线观看,泰剧推荐,泰剧TV,泰剧排行榜,泰剧资源">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ff6b9d'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='white' font-family='sans-serif'%3E泰%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --mag-bg: #fdf8f9;
+      --mag-primary: #d94f7a;
+      --mag-primary-dark: #b83b62;
+      --mag-secondary: #ffb3c6;
+      --mag-accent: #ff8fa3;
+      --mag-text: #2d2a2e;
+      --mag-text-light: #6b5b66;
+      --mag-card-bg: #ffffff;
+      --mag-border: #f0e1e6;
+      --mag-shadow: 0 8px 20px rgba(180, 80, 110, 0.06);
+      --mag-radius: 18px;
+      --mag-radius-sm: 12px;
+      --mag-font: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: var(--mag-font);
+      background-color: var(--mag-bg);
+      color: var(--mag-text);
+      line-height: 1.6;
+      font-size: 16px;
+      padding: 0 16px;
+    }
+    .mag-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 4px;
+    }
+    /* 导航 */
+    .mag-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 18px 0 12px;
+      border-bottom: 1px solid var(--mag-border);
+    }
+    .mag-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.6rem;
+      letter-spacing: -0.5px;
+      color: var(--mag-primary);
+    }
+    .mag-logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--mag-primary), var(--mag-accent));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 22px;
+      font-weight: 800;
+    }
+    .mag-nav-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-weight: 500;
+      color: var(--mag-text-light);
+    }
+    .mag-nav-links a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s;
+      font-size: 15px;
+    }
+    .mag-nav-links a:hover {
+      color: var(--mag-primary);
+    }
+    /* Banner */
+    .mag-hero {
+      margin: 32px 0 40px;
+      background: linear-gradient(145deg, #fff7f9 0%, #ffe9ef 100%);
+      border-radius: var(--mag-radius);
+      padding: 44px 40px 36px;
+      box-shadow: var(--mag-shadow);
+      border: 1px solid var(--mag-border);
+      position: relative;
+      overflow: hidden;
+    }
+    .mag-hero::after {
+      content: "🎬";
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
+      font-size: 100px;
+      opacity: 0.15;
+      transform: rotate(-8deg);
+      pointer-events: none;
+    }
+    .mag-hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--mag-text);
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .mag-hero h1 span {
+      color: var(--mag-primary);
+      background: linear-gradient(180deg, transparent 65%, var(--mag-secondary) 65%);
+      padding: 0 4px;
+    }
+    .mag-hero p {
+      font-size: 1.1rem;
+      color: var(--mag-text-light);
+      max-width: 650px;
+      margin-bottom: 24px;
+    }
+    .mag-search-box {
+      display: flex;
+      max-width: 500px;
+      background: white;
+      border-radius: 60px;
+      padding: 6px 6px 6px 20px;
+      box-shadow: 0 4px 12px rgba(180, 80, 110, 0.08);
+      border: 1px solid var(--mag-border);
+    }
+    .mag-search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      background: transparent;
+      padding: 10px 0;
+      color: var(--mag-text);
+    }
+    .mag-search-box input::placeholder {
+      color: #b9a6ad;
+    }
+    .mag-search-box button {
+      background: var(--mag-primary);
+      border: none;
+      color: white;
+      padding: 10px 26px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: default;
+      transition: background 0.2s;
+    }
+    .mag-hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+    .mag-hero-buttons a {
+      background: white;
+      padding: 8px 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      color: var(--mag-text-light);
+      font-weight: 500;
+      font-size: 14px;
+      border: 1px solid var(--mag-border);
+      transition: all 0.2s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+    .mag-hero-buttons a:hover {
+      background: var(--mag-primary);
+      color: white;
+      border-color: var(--mag-primary);
+    }
+    /* 通用标题 */
+    .mag-section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .mag-section-title::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 28px;
+      background: var(--mag-primary);
+      border-radius: 4px;
+    }
+    .mag-section {
+      margin: 52px 0;
+    }
+    /* 卡片网格 */
+    .mag-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .mag-card {
+      background: var(--mag-card-bg);
+      border-radius: var(--mag-radius-sm);
+      padding: 22px 20px;
+      box-shadow: var(--mag-shadow);
+      border: 1px solid var(--mag-border);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .mag-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 28px rgba(180, 80, 110, 0.12);
+    }
+    .mag-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--mag-text);
+    }
+    .mag-tag {
+      display: inline-block;
+      background: var(--mag-secondary);
+      color: var(--mag-primary-dark);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 30px;
+      margin-right: 6px;
+      margin-bottom: 8px;
+    }
+    .mag-card p {
+      color: var(--mag-text-light);
+      font-size: 14px;
+      margin: 8px 0 12px;
+      line-height: 1.5;
+    }
+    .mag-meta {
+      font-size: 13px;
+      color: #b09aa3;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    /* 最新更新列表 */
+    .mag-update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .mag-update-item {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: white;
+      padding: 14px 20px;
+      border-radius: 40px;
+      border: 1px solid var(--mag-border);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    .mag-update-item strong {
+      color: var(--mag-primary);
+      font-weight: 700;
+      min-width: 150px;
+    }
+    .mag-update-item span {
+      color: var(--mag-text-light);
+      font-size: 14px;
+    }
+    .mag-update-item time {
+      margin-left: auto;
+      font-size: 12px;
+      color: #b09aa3;
+    }
+    /* 分类入口 */
+    .mag-cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 14px;
+    }
+    .mag-cat-item {
+      background: white;
+      text-align: center;
+      padding: 18px 8px;
+      border-radius: 40px;
+      border: 1px solid var(--mag-border);
+      font-weight: 600;
+      color: var(--mag-text-light);
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+    .mag-cat-item:hover {
+      background: var(--mag-primary);
+      color: white;
+      border-color: var(--mag-primary);
+    }
+    /* 深度解析 */
+    .mag-article {
+      background: white;
+      padding: 36px 40px;
+      border-radius: var(--mag-radius);
+      box-shadow: var(--mag-shadow);
+      border: 1px solid var(--mag-border);
+    }
+    .mag-article h3 {
+      font-size: 1.5rem;
+      margin: 24px 0 12px;
+      font-weight: 700;
+    }
+    .mag-article h3:first-child {
+      margin-top: 0;
+    }
+    .mag-article p {
+      margin-bottom: 18px;
+      color: #3d3338;
+      font-size: 15.5px;
+    }
+    /* 体验指南 */
+    .mag-guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .mag-guide-item {
+      background: white;
+      padding: 20px;
+      border-radius: var(--mag-radius-sm);
+      border-left: 4px solid var(--mag-primary);
+      box-shadow: var(--mag-shadow);
+    }
+    .mag-guide-item h4 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .mag-guide-item p {
+      color: var(--mag-text-light);
+      font-size: 14px;
+    }
+    /* FAQ */
+    .mag-faq-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .mag-faq-item {
+      background: white;
+      padding: 22px;
+      border-radius: var(--mag-radius-sm);
+      border: 1px solid var(--mag-border);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    .mag-faq-item h4 {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+      color: var(--mag-primary-dark);
+    }
+    .mag-faq-item p {
+      font-size: 14px;
+      color: var(--mag-text-light);
+      line-height: 1.6;
+    }
+    /* 评论 */
+    .mag-comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .mag-comment-item {
+      background: white;
+      padding: 18px 20px;
+      border-radius: 20px;
+      border: 1px solid var(--mag-border);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    .mag-comment-user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .mag-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--mag-secondary), var(--mag-primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .mag-comment-user strong {
+      font-size: 14px;
+      color: var(--mag-text);
+    }
+    .mag-comment-user time {
+      font-size: 12px;
+      color: #b09aa3;
+      margin-left: auto;
+    }
+    .mag-comment-item p {
+      font-size: 14px;
+      color: var(--mag-text-light);
+    }
+    /* 资讯卡片 */
+    .mag-news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .mag-news-card {
+      background: white;
+      padding: 22px;
+      border-radius: var(--mag-radius-sm);
+      border: 1px solid var(--mag-border);
+      box-shadow: var(--mag-shadow);
+    }
+    .mag-news-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+    .mag-news-card time {
+      font-size: 12px;
+      color: #b09aa3;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .mag-news-card p {
+      font-size: 14px;
+      color: var(--mag-text-light);
+    }
+    /* 页脚 */
+    .mag-footer {
+      margin-top: 70px;
+      padding: 40px 0 30px;
+      border-top: 1px solid var(--mag-border);
+      color: var(--mag-text-light);
+      font-size: 14px;
+    }
+    .mag-footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .mag-footer a {
+      color: var(--mag-text-light);
+      text-decoration: none;
+      margin-right: 18px;
+    }
+    .mag-footer a:hover {
+      color: var(--mag-primary);
+    }
+    .mag-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 0;
+    }
+    .mag-copyright {
+      margin-top: 24px;
+      text-align: center;
+      color: #b09aa3;
+      font-size: 13px;
+    }
+    /* 响应式 */
+    @media (max-width: 768px) {
+      .mag-hero {
+        padding: 28px 22px;
+      }
+      .mag-hero h1 {
+        font-size: 1.9rem;
+      }
+      .mag-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .mag-nav-links {
+        gap: 16px;
+      }
+      .mag-faq-list {
+        grid-template-columns: 1fr;
+      }
+      .mag-article {
+        padding: 24px 20px;
+      }
+      .mag-section-title {
+        font-size: 1.5rem;
+      }
+      .mag-card-grid {
+        grid-template-columns: 1fr;
+      }
+      .mag-cat-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .mag-hero h1 {
+        font-size: 1.6rem;
+      }
+      .mag-search-box {
+        flex-direction: column;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        gap: 10px;
+      }
+      .mag-search-box input {
+        background: white;
+        padding: 14px 20px;
+        border-radius: 60px;
+        border: 1px solid var(--mag-border);
+        width: 100%;
+      }
+      .mag-search-box button {
+        width: 100%;
+        padding: 14px;
+      }
+      .mag-cat-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .mag-update-item {
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 20px;
+      }
+      .mag-update-item time {
+        margin-left: 0;
+      }
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+  <div class="mag-container">
+    <!-- 导航 -->
+    <nav class="mag-nav">
+      <div class="mag-logo">
+        <span class="mag-logo-icon">泰</span>
+        <span>泰剧网</span>
+      </div>
+      <div class="mag-nav-links">
+        <a href="/#mag-hot">热门推荐</a>
+        <a href="/#mag-update">最新更新</a>
+        <a href="/#mag-category">分类</a>
+        <a href="/#mag-deep">深度解析</a>
+        <a href="/#mag-faq">常见问题</a>
+        <a href="/#mag-news">资讯</a>
+      </div>
+    </nav>
+
+    <!-- Banner -->
+    <header class="mag-hero" id="mag-top">
+      <h1><span>泰剧网</span> · 泰剧在线观看与推荐基地</h1>
+      <p>2026年11月7日更新 · 汇集泰国热播剧、经典老剧、腐剧、BG剧、泰剧TV资源。从新剧速递到口碑排行，一站式发现你想看的泰剧。</p>
+      <div class="mag-search-box">
+        <input type="text" placeholder="搜索泰剧、演员或关键词…" value="泰剧网 推荐" readonly>
+        <button>搜索</button>
+      </div>
+      <div class="mag-hero-buttons">
+        <a href="/#mag-hot">🔥 热门泰剧</a>
+        <a href="/#mag-update">📺 今日更新</a>
+        <a href="/#mag-category">📂 分类浏览</a>
+        <a href="/#mag-deep">📖 深度解析</a>
+        <a href="/#mag-faq">❓ 常见问题</a>
+        <a href="/#mag-comments">💬 用户评论</a>
+        <a href="/#mag-news">📰 泰剧资讯</a>
+        <a href="/#mag-guide">📱 体验指南</a>
+      </div>
+    </header>
+
+    <!-- 热门推荐 -->
+    <section class="mag-section" id="mag-hot">
+      <h2 class="mag-section-title">热门泰剧推荐 · 大家都在追</h2>
+      <div class="mag-card-grid">
+        <div class="mag-card">
+          <div class="mag-tag">泰剧</div>
+          <h3>《命运之约》</h3>
+          <p>豪门虐恋+失忆梗，男女主颜值在线，第6集收视破3。泰剧网热度飙升中。</p>
+          <div class="mag-meta"><span>热度 9820</span><span>更新至EP10</span><span>评分 8.9</span></div>
+        </div>
+        <div class="mag-card">
+          <div class="mag-tag">腐剧</div>
+          <h3>《心链》</h3>
+          <p>校园BL纯爱，双向暗恋+竹马变恋人，细腻演技让泰剧网评论区沦陷。</p>
+          <div class="mag-meta"><span>热度 12300</span><span>已完结</span><span>评分 9.2</span></div>
+        </div>
+        <div class="mag-card">
+          <div class="mag-tag">悬疑</div>
+          <h3>《暗夜信号》</h3>
+          <p>泰式恐怖悬疑，电台主持人卷入连环事件，每集反转。泰剧网悬疑榜第一。</p>
+          <div class="mag-meta"><span>热度 8700</span><span>更新至EP8</span><span>评分 8.5</span></div>
+        </div>
+        <div class="mag-card">
+          <div class="mag-tag">年代</div>
+          <h3>《湄南河之恋》</h3>
+          <p>复古年代爱情，服化道精美，讲述华裔家族三代人的爱恨纠葛。</p>
+          <div class="mag-meta"><span>热度 7600</span><span>更新至EP14</span><span>评分 9.0</span></div>
+        </div>
+        <div class="mag-card">
+          <div class="mag-tag">喜剧</div>
+          <h3>《我家有鬼》</h3>
+          <p>搞笑奇幻日常，女主意外继承凶宅，和帅鬼同居。泰剧网轻松下饭首选。</p>
+          <div class="mag-meta"><span>热度 6400</span><span>已完结</span><span>评分 8.2</span></div>
+        </div>
+        <div class="mag-card">
+          <div class="mag-tag">动作</div>
+          <h3>《曼谷风云》</h3>
+          <p>黑帮卧底题材，打戏拳拳到肉，双男主对峙张力十足。泰剧网动作类新宠。</p>
+          <div class="mag-meta"><span>热度 9100</span><span>更新至EP12</span><span>评分 8.7</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最新更新 -->
+    <section class="mag-section" id="mag-update">
+      <h2 class="mag-section-title">最新更新 · 追剧不迷路</h2>
+      <div class="mag-update-list">
+        <div class="mag-update-item"><strong>《命运之约》</strong><span>第10集已上线，女主恢复记忆，虐心升级。</span><time>2026-11-07</time></div>
+        <div class="mag-update-item"><strong>《心链》特别篇</strong><span>番外篇《七年后的我们》上线泰剧网，甜蜜售后。</span><time>2026-11-06</time></div>
+        <div class="mag-update-item"><strong>《暗夜信号》</strong><span>第8集更新，真凶线索浮出水面，弹幕破万。</span><time>2026-11-06</time></div>
+        <div class="mag-update-item"><strong>《湄南河之恋》</strong><span>第14集更新，家族秘密即将揭晓。</span><time>2026-11-05</time></div>
+        <div class="mag-update-item"><strong>《曼谷风云》</strong><span>第12集更新，卧底身份暴露倒计时。</span><time>2026-11-05</time></div>
+        <div class="mag-update-item"><strong>《恋爱实习期》</strong><span>新剧开播，职场甜宠，首更2集。</span><time>2026-11-04</time></div>
+        <div class="mag-update-item"><strong>《月光下的遗嘱》</strong><span>第5集更新，遗产争夺战白热化。</span><time>2026-11-04</time></div>
+        <div class="mag-update-item"><strong>《丛林笔记》</strong><span>纪录片式泰剧，第3集上线，自然与人性。</span><time>2026-11-03</time></div>
+      </div>
+    </section>
+
+    <!-- 分类入口 -->
+    <section class="mag-section" id="mag-category">
+      <h2 class="mag-section-title">泰剧分类 · 按口味找剧</h2>
+      <div class="mag-cat-grid">
+        <a href="/#mag-hot" class="mag-cat-item">🔥 热播剧</a>
+        <a href="/#mag-hot" class="mag-cat-item">💔 虐恋</a>
+        <a href="/#mag-hot" class="mag-cat-item">🌈 腐剧</a>
+        <a href="/#mag-hot" class="mag-cat-item">😂 喜剧</a>
+        <a href="/#mag-hot" class="mag-cat-item">🔍 悬疑</a>
+        <a href="/#mag-hot" class="mag-cat-item">👑 年代</a>
+        <a href="/#mag-hot" class="mag-cat-item">🥊 动作</a>
+        <a href="/#mag-hot" class="mag-cat-item">🧙 奇幻</a>
+      </div>
+    </section>
+
+    <!-- 深度解析 -->
+    <section class="mag-section" id="mag-deep">
+      <h2 class="mag-section-title">深度解析 · 泰剧网编辑观察</h2>
+      <div class="mag-article">
+        <h3>为什么泰剧越来越好看？</h3>
+        <p>泰剧网一直关注泰国影视剧的发展。近几年泰剧在题材和制作上都有明显提升，从传统的虐恋、豪门争斗，扩展到悬疑、奇幻、BL、年代史诗等多元类型。以《命运之约》为例，虽然还是失忆梗，但剧本逻辑更严密，演员演技在线，服化道精致，加上泰国特有的热带美学，让观众代入感更强。泰剧网收录的剧集涵盖各大电视台和流媒体平台，很多剧在泰国刚播完，国内剧迷就能通过泰剧网找到资源和讨论区。</p>
+        <h3>泰剧的独特吸引力</h3>
+        <p>泰剧的情感表达直接而浓烈，无论是甜宠还是虐心，都能让观众情绪跌宕。泰剧网编辑发现，很多用户来泰剧网搜索“泰剧推荐”时，最看重的是剧情张力和演员CP感。泰国演员往往外形出众，演技自然，加上热带风光和特色配乐，形成了泰剧独有的氛围感。另外，泰剧的集数通常较短，节奏快，适合当下观众的追剧习惯。泰剧网也会定期整理“高能泰剧”榜单，帮助新入坑的观众快速找到佳作。</p>
+        <h3>泰剧网能为你做什么？</h3>
+        <p>泰剧网不仅提供泰剧在线观看的导航和推荐，还聚合了用户评论、评分和最新资讯。在泰剧网，你可以根据分类筛选自己感兴趣的题材，也可以参考编辑精选和热门榜单。我们不做资源存储，而是做一个泰剧爱好者的信息枢纽，让你不必在多个平台间反复搜索。从经典老剧《初恋这件小事》剧版，到新晋黑马《心链》，泰剧网都设有专题页面和讨论区，方便剧迷交流。</p>
+        <h3>适合谁看泰剧？</h3>
+        <p>泰剧的受众非常广泛：喜欢甜宠和虐恋的观众可以找到大量BG剧；腐剧爱好者能在泰剧网发现最新BL作品；悬疑迷也能找到《暗夜信号》这类高能剧集。泰剧网的用户画像显示，18-35岁的女性观众占比较高，但近年男性观众和熟龄观众也在增长。泰剧网建议新观众可以从高分短剧入门，比如《心链》只有12集，节奏快，容易入坑。泰剧网也会在FAQ里解答“先看哪部”“有没有类似推荐”等问题。</p>
+      </div>
+    </section>
+
+    <!-- 体验指南 -->
+    <section class="mag-section" id="mag-guide">
+      <h2 class="mag-section-title">体验指南 · 泰剧网使用手册</h2>
+      <div class="mag-guide-grid">
+        <div class="mag-guide-item"><h4>📱 移动端友好</h4><p>页面自适应手机屏幕，卡片式布局方便拇指操作，随时随地刷泰剧资讯。</p></div>
+        <div class="mag-guide-item"><h4>🔍 分类清晰</h4><p>按题材、热度、更新时间分类，快速筛选你想看的泰剧类型。</p></div>
+        <div class="mag-guide-item"><h4>📌 追更收藏</h4><p>记住喜欢的剧集名称，通过泰剧网最新更新列表跟进播出进度。</p></div>
+        <div class="mag-guide-item"><h4>💬 用户评论</h4><p>看其他剧迷的真实评价，避雷或种草，找到同好。</p></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mag-section" id="mag-faq">
+      <h2 class="mag-section-title">常见问题 · 泰剧网答疑</h2>
+      <div class="mag-faq-list">
+        <div class="mag-faq-item"><h4>泰剧网是免费观看的吗？</h4><p>泰剧网本身不提供视频文件存储，而是聚合泰剧资讯和推荐，并引导至合法观看渠道。用户可以在泰剧网了解剧集信息后，前往正规平台观看。</p></div>
+        <div class="mag-faq-item"><h4>泰剧网收录哪些类型的泰剧？</h4><p>涵盖爱情、腐剧、悬疑、喜剧、年代、动作、奇幻等。泰剧网也会根据热度推荐热门BL剧和BG剧，满足不同观众口味。</p></div>
+        <div class="mag-faq-item"><h4>如何快速找到想看的泰剧？</h4><p>可以使用页面顶部的搜索框，或通过分类入口按题材浏览。泰剧网的“最新更新”和“热门推荐”板块也能帮你发现好剧。</p></div>
+        <div class="mag-faq-item"><h4>泰剧更新频率如何？</h4><p>大部分泰剧每周更新1-2集，泰剧网会及时同步更新信息。部分短剧或腐剧可能一次性放出全集，具体以剧集页面为准。</p></div>
+        <div class="mag-faq-item"><h4>泰剧网有经典老剧吗？</h4><p>有的。泰剧网收录了多部经典泰剧的介绍和讨论入口，包括《一吻定情》泰版等，方便老剧重温。</p></div>
+        <div class="mag-faq-item"><h4>如何参与评论和讨论？</h4><p>泰剧网在每部剧集专题下设有评论区，注册用户可发表看法。请遵守社区规则，友善交流。</p></div>
+      </div>
+    </section>
+
+    <!-- 用户评论 -->
+    <section class="mag-section" id="mag-comments">
+      <h2 class="mag-section-title">用户评论 · 真实剧迷声音</h2>
+      <div class="mag-comment-grid">
+        <div class="mag-comment-item"><div class="mag-comment-user"><span class="mag-avatar">小</span><strong>小鹿爱泰剧</strong><time>2026-11-06</time></div><p>《心链》后劲太大了，泰剧网推荐的腐剧果然靠谱，已经二刷了。</p></div>
+        <div class="mag-comment-item"><div class="mag-comment-user"><span class="mag-avatar">A</span><strong>Annie</strong><time>2026-11-05</time></div><p>《命运之约》第10集太好哭了，男主失忆那段演技炸裂，泰剧网更新很及时。</p></div>
+        <div class="mag-comment-item"><div class="mag-comment-user"><span class="mag-avatar">B</span><strong>Bangkok风</strong><time>2026-11-05</time></div><p>最近泰剧质量参差不齐，不过《暗夜信号》算惊喜，希望结局别烂尾。</p></div>
+        <div class="mag-comment-item"><div class="mag-comment-user"><span class="mag-avatar">L</span><strong>Lily_追剧</strong><time>2026-11-04</time></div><p>泰剧网的分类很实用，按腐剧筛选直接找到好几部想看的，赞。</p></div>
+        <div class="mag-comment-item"><div class="mag-comment-user"><span class="mag-avatar">M</span><strong>Mango</strong><time>2026-11-04</time></div><p>《湄南河之恋》服化道太精致了，剧情有点慢，但画面真的美。</p></div>
+        <div class="mag-comment-item"><div class="mag-comment-user"><span class="mag-avatar">T</span><strong>泰剧收藏家</strong><time>2026-11-03</time></div><p>希望泰剧网多推荐一些冷门好剧，热门来回就那几部。</p></div>
+        <div class="mag-comment-item"><div class="mag-comment-user"><span class="mag-avatar">K</span><strong>Kira</strong><time>2026-11-02</time></div><p>《我家有鬼》下饭神剧，男主帅鬼太可爱了，泰剧网评分8.2有点低。</p></div>
+        <div class="mag-comment-item"><div class="mag-comment-user"><span class="mag-avatar">P</span><strong>Pat</strong><time>2026-11-01</time></div><p>曼谷风云打戏真的不错，但感情线有点突兀，期待后续。</p></div>
+        <div class="mag-comment-item"><div class="mag-comment-user"><span class="mag-avatar">J</span><strong>Jaew</strong><time>2026-10-30</time></div><p>通过泰剧网找到《恋爱实习期》，职场甜剧，轻松好看。</p></div>
+        <div class="mag-comment-item"><div class="mag-comment-user"><span class="mag-avatar">S</span><strong>Som</strong><time>2026-10-29</time></div><p>老泰剧迷了，泰剧网资讯更新挺快，希望增加泰语原名搜索。</p></div>
+        <div class="mag-comment-item"><div class="mag-comment-user"><span class="mag-avatar">F</span><strong>Fah</strong><time>2026-10-28</time></div><p>《月光下的遗嘱》剧情越来越狗血，但我停不下来，泰剧网推荐的。</p></div>
+        <div class="mag-comment-item"><div class="mag-comment-user"><span class="mag-avatar">N</span><strong>Nina</strong><time>2026-10-26</time></div><p>希望泰剧网出个年度十佳榜单，方便补剧。</p></div>
+      </div>
+    </section>
+
+    <!-- 相关资讯 -->
+    <section class="mag-section" id="mag-news">
+      <h2 class="mag-section-title">泰剧资讯 · 新鲜速递</h2>
+      <div class="mag-news-grid">
+        <div class="mag-news-card"><h4>《心链》制作公司宣布开发第二季</h4><time>2026-11-07</time><p>泰剧网获悉，热门BL泰剧《心链》制作方正在筹备第二季，原班人马有望回归。</p></div>
+        <div class="mag-news-card"><h4>《命运之约》收视率创同时段新高</h4><time>2026-11-06</time><p>泰国三台数据显示，该剧第9集收视突破3.2，网络讨论度持续攀升。</p></div>
+        <div class="mag-news-card"><h4>泰剧《暗夜信号》确定加更两集</h4><time>2026-11-05</time><p>因反响热烈，制作方决定增加两集特别篇，泰剧网将同步更新。</p></div>
+        <div class="mag-news-card"><h4>2026年泰国电视剧出口额增长15%</h4><time>2026-11-04</time><p>泰剧在亚洲市场影响力扩大，腐剧和悬疑类型贡献显著。</p></div>
+        <div class="mag-news-card"><h4>经典泰剧《初恋这件小事》将拍剧版</h4><time>2026-11-02</time><p>电影版导演有望监制，泰剧网将持续关注选角动态。</p></div>
+        <div class="mag-news-card"><h4>泰剧网网友票选“最期待新剧”结果出炉</h4><time>2026-10-31</time><p>《丛林笔记》登顶，腐剧《心链》第二季位列第二。</p></div>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="mag-footer">
+      <div class="mag-footer-inner">
+        <div>
+          <div style="font-weight:700; color:var(--mag-primary); font-size:1.2rem; margin-bottom:12px;">泰剧网</div>
+          <p style="max-width:300px;">泰剧网是泰剧爱好者的信息枢纽，提供最新泰剧推荐、排行榜、资讯与用户讨论。本站不存储视频资源，所有内容均来自公开信息与用户分享。</p>
+        </div>
+        <div class="mag-footer-links">
+          <a href="/#mag-hot">热门推荐</a>
+          <a href="/#mag-update">最新更新</a>
+          <a href="/#mag-category">分类</a>
+          <a href="/#mag-deep">深度解析</a>
+          <a href="/#mag-faq">常见问题</a>
+          <a href="/#mag-news">资讯</a>
+          <a href="/#mag-comments">评论</a>
+        </div>
+      </div>
+      <div class="mag-copyright">
+        © 2026 泰剧网 · 内容仅供剧迷交流参考 · 友情链接：泰剧TV资源站 | 泰剧排行榜 | 泰剧网
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
